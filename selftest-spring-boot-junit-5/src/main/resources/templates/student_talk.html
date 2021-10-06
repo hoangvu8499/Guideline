@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student talk list</title>
+</head>
+<body>
+    <h2>Student Talk List</h2>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        <tr th:each="studentObj,loop : ${studentTalkList}">
+            <td th:text="${loop.index + 1}"></td>
+            <td th:text="${studentObj.id}"></td>
+            <td th:text="${studentObj.name}"></td>
+        </tr>
+    </table>
+</body>
+</html>
